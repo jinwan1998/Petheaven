@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Declare the character encoding of the document -->
+  <meta charset="UTF-8">
+  <!-- Set the title of the page -->
+  <title>AZoom Car Rental</title>
+  <!-- Link to the stylesheet for the page -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <!-- The header of the page -->
+  <header>
+    <!-- The title of the website -->
+    <h1>AZoom Car Rental</h1>
+    <!-- The navigation menu -->
+    <nav>
+      <ul>
+        <!-- Links to different sections of the page -->
+        <li><a href="#home">Home</a></li>
+        <li><a href="#reserve">Reserve a Car</a></li>
+        <li><a href="#process">Rent a Car</a></li>
+        <li><a href="#return">Return a Car</a></li>
+        <li><a href="#bill">Pay Final Bill</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- The main content of the page -->
+  <main>
+    <!-- The Home section -->
+    <section id="home">
+      <!-- The header for the section -->
+      <h2 class="animated fadeInDown">Welcome to AZoom Car Rental</h2>
+      <!-- The description of the section -->
+      <p class="animated fadeInUp">We offer a wide range of cars to rent, at competitive prices.</p>
+    </section>
+
+    <!-- The Reserve section -->
+    <section id="reserve">
+      <!-- The header for the section -->
+      <h2>Reserve our Cars</h2>
+      <!-- The list of available cars -->
+      <ul>
+        <!-- The first car -->
+        <li>
+          <!-- The image of the car -->
+          <img src="./image/sedan.jpg" alt="Sedan" class="car-image"
+            onclick="window.open('https://www.carwale.com/honda-cars/city/360-view/', '_blank')">
+          <!-- The information about the car -->
+          <div class="car-info">
+            <h3>Sedan</h3>
+            <p>$50/day</p>
+            <!-- The button to reserve the car -->
+            <button class="reserve-btn" data-price="50">Reserve</button>
+          </div>
+        </li>
+                <li>
+                    <img src="./image/suv.jpg" alt="SUV" class="car-image"
+                        onclick="window.open('https://www.carwale.com/honda-cars/cr-v/360-view/', '_blank')">
+                    <h3>SUV</h3>
+                    <p>$60/day</p>
+                    <button class="reserve-btn" data-price="60">Reserve</button>
+                </li>
+                <li>
+                    <img src="./image/mpv.jpg" alt="Mpv" class="car-image"
+                        onclick="window.open('https://www.carwale.com/toyota-cars/innova-crysta/360-view/', '_blank')">
+                    <h3>MPV</h3>
+                    <p>$70/day</p>
+                    <button class="reserve-btn" data-price="70">Reserve</button>
+                </li>
+                <li>
+                    <img src="./image/convertible.jpg" alt="Convertible" class="car-image"
+                        onclick="window.open('https://www.carwale.com/honda-cars/cr-v/360-view/', '_blank')">
+                    <h3>Convertible</h3>
+                    <p>$80/day</p>
+                    <button class="reserve-btn" data-price="80">Reserve</button>
+                </li>
+            </ul>
+        </section>
+
+
+
+        </section>
+
+        <section id="process">
+            <h1>AZoom Car Rental Process</h1>
+
+            <div class="step">
+                <h2>Step 1: Rent a car at AZoom office</h2>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.7441521399064!2d103.7740383145386!3d1.3295569990302947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da1080893304bd%3A0xeb5cd6b131800b42!2sSIM%20Global%20Education%20Block%20A!5e0!3m2!1szh-CN!2sus!4v1675858589911!5m2!1szh-CN!2sus"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <p>AZoom office address: 123 Main St, Anytown Singapore</p>
+            </div>
+
+            <section id="return">
+                <div class="step">
+                    <h2>Step 2: Return the car at designated parking lot</h2>
+                    <table class="designated-parking-lot">
+                        <tr>
+                            <th>Vehicle Type</th>
+                            <th>Parking Lot</th>
+                        </tr>
+                        <tr>
+                            <td>Sedan</td>
+                            <td>Lot A</td>
+                        </tr>
+                        <tr>
+                            <td>SUV</td>
+                            <td>Lot B</td>
+                        </tr>
+                        <tr>
+                            <td>MPV</td>
+                            <td>Lot C</td>
+                        </tr>
+                        <tr>
+                            <td>Convertible</td>
+                            <td>Lot D</td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+            <div class="step">
+                <h2>Step 3: AZoom staff inspects the returned car</h2>
+                <p>Our trained and professional staff inspects the returned car to ensure it's in good condition and
+                    free of any damages.</p>
+                <ul>
+                    <li>Exterior inspection for dents and scratches</li>
+                    <li>Interior inspection for cleanliness and damages</li>
+                    <li>Tire and engine check</li>
+                    <li>Fuel level verification</li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <h2>Step 4: Customer pays the final bill</h2>
+                <p>Any damage found will be paid when the car is returned</p>
+                <section id="bill">
+                    <h2>Pay Bill</h2>
+                    <form id="payment-form">
+                        <label for="days">Number of Days:</label>
+                        <input type="number" id="days" name="days">
+                        <br><br>
+                        <label for="total">Total:</label>
+                        <input type="text" id="total" name="total" readonly>
+                        <br><br>
+                        <label for="card-number">Credit Card Number:</label>
+                        <input type="text" id="card-number" name="card-number">
+                        <br><br>
+                        <label for="exp-date">Expiration Date:</label>
+                        <input type="text" id="exp-date" name="exp-date">
+                        <br><br>
+                        <label for="cvc">CVC:</label>
+                        <input type="text" id="cvc" name="cvc">
+                        <br><br>
+                        <input type="submit" value="Pay">
+                    </form>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>AZoom Car Rental</p>
+            <p>123 Main Street</p>
+            <p>Anytown, Singapore 12345</p>
+            <p>+65 5555-5555</p>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright &copy; 2023 AZoom Car Rental</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
