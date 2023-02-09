@@ -4,6 +4,9 @@ body {
 }
 
 header {
+    position: fixed;
+        top: 1;
+        width: 100%;
     background-color: #333;
     color: white;
     text-align: center;
@@ -11,6 +14,7 @@ header {
 }
 
 nav {
+    
     background-color: #333;
     color: white;
     text-align: center;
@@ -37,7 +41,7 @@ nav a {
 }
 
 main {
-    padding: 2em;
+    padding: 10em;
 }
 
 footer {
@@ -317,3 +321,11 @@ li:hover .car-images {
     display: block;
 }
 
+#payment-form label {
+    font-weight: bold;
+}
+#payment-confirmation {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+}

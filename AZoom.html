@@ -26,12 +26,14 @@
         <li><a href="#bill">Pay Final Bill</a></li>
       </ul>
     </nav>
+    
   </header>
 
   <!-- The main content of the page -->
   <main>
     <!-- The Home section -->
     <section id="home">
+        <br><br><br><br><br><br><br><br>
       <!-- The header for the section -->
       <h2 class="animated fadeInDown">Welcome to AZoom Car Rental</h2>
       <!-- The description of the section -->
@@ -40,8 +42,10 @@
 
     <!-- The Reserve section -->
     <section id="reserve">
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
       <!-- The header for the section -->
       <h2>Reserve our Cars</h2>
+      
       <!-- The list of available cars -->
       <ul>
         <!-- The first car -->
@@ -87,19 +91,25 @@
 
         <section id="process">
             <h1>AZoom Car Rental Process</h1>
-
+            
+            <br><br><br><br><br><br><br><br>
             <div class="step">
+                
                 <h2>Step 1: Rent a car at AZoom office</h2>
+                
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.7441521399064!2d103.7740383145386!3d1.3295569990302947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da1080893304bd%3A0xeb5cd6b131800b42!2sSIM%20Global%20Education%20Block%20A!5e0!3m2!1szh-CN!2sus!4v1675858589911!5m2!1szh-CN!2sus"
                     width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
                 <p>AZoom office address: 123 Main St, Anytown Singapore</p>
             </div>
-
+            
             <section id="return">
+                <br><br><br><br><br><br><br><br>
                 <div class="step">
+                    
                     <h2>Step 2: Return the car at designated parking lot</h2>
+                    
                     <table class="designated-parking-lot">
                         <tr>
                             <th>Vehicle Type</th>
@@ -124,7 +134,9 @@
                     </table>
                 </div>
             </section>
+            
             <div class="step">
+                <br><br><br><br><br><br><br><br>
                 <h2>Step 3: AZoom staff inspects the returned car</h2>
                 <p>Our trained and professional staff inspects the returned car to ensure it's in good condition and
                     free of any damages.</p>
@@ -135,31 +147,47 @@
                     <li>Fuel level verification</li>
                 </ul>
             </div>
-
+           
+            
+            <section id="bill">
+            <br><br><br><br><br><br><br><br>
             <div class="step">
+                
                 <h2>Step 4: Customer pays the final bill</h2>
                 <p>Any damage found will be paid when the car is returned</p>
-                <section id="bill">
+                
                     <h2>Pay Bill</h2>
                     <form id="payment-form">
                         <label for="days">Number of Days:</label>
-                        <input type="number" id="days" name="days">
+                        <input type="number" id="days" name="days" required>
                         <br><br>
                         <label for="total">Total:</label>
                         <input type="text" id="total" name="total" readonly>
                         <br><br>
                         <label for="card-number">Credit Card Number:</label>
-                        <input type="text" id="card-number" name="card-number">
+                        <input type="text" id="card-number" name="card-number" required pattern="[0-9]{16}" placeholder="Enter 16-digit">
                         <br><br>
                         <label for="exp-date">Expiration Date:</label>
-                        <input type="text" id="exp-date" name="exp-date">
+                        <input type="text" id="exp-date" name="exp-date" required pattern="[0-9]{2}/[0-9]{2}" placeholder="MM/YY">
                         <br><br>
                         <label for="cvc">CVC:</label>
-                        <input type="text" id="cvc" name="cvc">
+                        <input type="text" id="cvc" name="cvc" required pattern="[0-9]{3}">
                         <br><br>
-                        <input type="submit" value="Pay">
+                        <input type="submit" value="Pay" onclick="return submitForm()">
                     </form>
+                    <div id="confirmation" style="display:none">
+                        <p>Please confirm your payment information:</p>
+                        <p>Number of Days: <span id="confirm-days"></span></p>
+                        <p>Total: <span id="confirm-total"></span></p>
+                        <p>Credit Card Number: <span id="confirm-card-number"></span></p>
+                        <p>Expiration Date: <span id="confirm-exp-date"></span></p>
+                        <p>CVC: <span id="confirm-cvc"></span></p>
+                        <button onclick="submitPayment()">Confirm</button>
+                        <button onclick="cancelPayment()">Cancel</button>
+                    </div>
+                
             </div>
+        </section>
         </section>
 
         <section id="contact">
