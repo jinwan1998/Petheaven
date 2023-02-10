@@ -4,9 +4,7 @@ body {
 }
 
 header {
-    position: fixed;
-        top: 1;
-        width: 100%;
+    font-family:Algerian;
     background-color: #333;
     color: white;
     text-align: center;
@@ -14,7 +12,6 @@ header {
 }
 
 nav {
-    
     background-color: #333;
     color: white;
     text-align: center;
@@ -41,7 +38,7 @@ nav a {
 }
 
 main {
-    padding: 10em;
+    padding: 2em;
 }
 
 footer {
@@ -92,7 +89,6 @@ td {
     padding: 20px;
     border: 1px solid black;
     width: 1000px;
-
     text-align: center;
     display: inline-block;
     vertical-align: top;
@@ -100,34 +96,14 @@ td {
 }
 
 .step ul {
-    list-style-type: none;
+    
     text-align: left;
     padding: 0;
 }
 
-.step li::before {
-    content: "\f067";
-    font-family: FontAwesome;
-    display: inline-block;
-    margin-right: 10px;
-}
 
-
-.designated-parking-lot {
-    border-collapse: collapse;
-    width: 100%;
-    text-align: center;
-    margin-top: 20px;
-}
-
-.designated-parking-lot th,
-td {
-    border: 1px solid black;
-    padding: 8px;
-}
-
-.designated-parking-lot th {
-    background-color: lightblue;
+.step li{
+    font-family: BankGothic Md BT;
 }
 
 form {
@@ -201,32 +177,12 @@ input[type="submit"] {
     animation-fill-mode: both;
 }
 
-/* 整体样式 */
-#reserve {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 30px 0;
-}
 
-/* 每一个车型的样式 */
-#reserve li {
-    width: 20%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px 10px;
-    position: relative;
-    transition: all 0.3s;
-}
-
-/* 悬停样式 */
 #reserve li:hover {
     transform: scale(1.1);
 }
 
-/* 图片样式 */
+
 .car-image {
     width: 100%;
     height: 200px;
@@ -236,14 +192,14 @@ input[type="submit"] {
     transition: all 0.3s;
 }
 
-/* 悬停图片样式 */
+
 #reserve li:hover .car-image {
     transform: scale(1.2);
 }
 
 
 
-/* 按钮样式 */
+
 .reserve-btn {
     padding: 10px 20px;
     background-color: #007bff;
@@ -255,10 +211,8 @@ input[type="submit"] {
     transition: all 0.3s;
 }
 
-/* 按钮悬停样式 */
-.reserve-btn:hover {
-    background-color: #0069d9;
-}
+
+
 
 section#reserve li {
     display: inline-block;
@@ -321,11 +275,26 @@ li:hover .car-images {
     display: block;
 }
 
-#payment-form label {
-    font-weight: bold;
+#payment-form input[type="text"], #payment-form input[type="number"] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
 }
-#payment-confirmation {
-    background-color: #f2f2f2;
-    padding: 20px;
-    border-radius: 5px;
+
+#payment-form input[type="submit"] {
+    width: 50%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#payment-form input[type="submit"]:hover {
+    background-color: #45a049;
 }
